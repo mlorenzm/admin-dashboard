@@ -17,26 +17,40 @@ body{
     grid-area: 'nav' 'content-container';
 }
 
+/* Navbar */
 .nav{
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
     background-color: var(--slate-dark);
     display: flex;
     flex-direction: column;
-    gap: 3rem;
-    padding-left: 1rem;
+    gap: 2.5rem;
+    
 }
 .nav ul{
     line-height: 2.5rem;
+    padding-left: 1rem;
+}
+.dashboard-ico{
+    width: 3rem;
 }
 .logo{
     font-family: 'Montserrat';
-    font-size: 2rem;
-    padding-top: 1rem;
+    font-size: 1.75rem;
 }
-
-
+.icon-container{
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    padding: 0.5rem 1rem 0 0.75rem;
+    cursor: pointer;
+}
+.icon-container:hover, .icon-container:focus{
+    position: relative;
+    top: 1px;
+    
+}
 
 .content-container{
     background-color: var(--slate-light);
@@ -49,3 +63,16 @@ body{
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
+.nav-top img, .nav-bottom img{
+    width: 1.5rem;
+}
+
+.nav-container{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+}
+.nav-container:hover{
+    position: relative;
+    scale: 105%;
+}
