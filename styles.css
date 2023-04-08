@@ -1,6 +1,7 @@
 :root{
     --tahiti: #3ab7bf;
     --slate-light: #f1f5f9; 
+    --slate-mid: #cbd5e1;
     --slate-dark: #64748b;
 }
 *{
@@ -8,8 +9,11 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    user-select: none;
 }
-
+img, svg{
+    -webkit-user-drag: none;
+}
 body{
     height:100vh;
     display:grid;
@@ -73,6 +77,97 @@ body{
     cursor: pointer;
 }
 .nav-container:hover{
+    position: relative;
+    scale: 105%;
+}
+
+.header{
+    padding: 0 1rem 0 2rem;
+}
+/* Search container */
+.searchbar-container img{
+    width: 1.5rem;
+    cursor: pointer;
+} 
+.searchbar-container svg {
+    width: 2.5rem;
+    cursor:pointer;
+}
+.searchbar{
+    background-color: var(--slate-mid);
+    width: 5rem;
+    height:1.5rem;
+    border-radius: 15px;
+    flex:1;
+    margin-right: 2rem;
+    cursor:text;
+}
+.searchbar-container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.search-icon{
+    margin-right: -1.5rem;
+}
+
+.searchbar-user{
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* User container */
+.user-container button{
+    background-color: var(--slate-dark);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: white;
+    cursor: pointer;
+}
+.user-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr 1fr 1fr;
+    grid-template-areas:
+    'user-icon hi-there . . .'
+    'user-icon username new upload share';
+    gap: 0px 1rem;
+    padding-bottom: 1rem;
+}
+.user-icon{
+    grid-area: user-icon;
+
+}
+.new{
+    grid-area: new;
+    align-self: start;
+}
+.upload{
+    grid-area: upload;
+    align-self: start;
+}
+.share{
+    grid-area: share;
+    align-self: start;
+}
+.hi-there{
+    grid-area: hi-there;
+    align-self: center;
+}
+.username{
+    align-self: start;
+    grid-area: username;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+}
+
+.user-container button:hover{
     position: relative;
     scale: 105%;
 }
