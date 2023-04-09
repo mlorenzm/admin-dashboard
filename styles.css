@@ -193,7 +193,7 @@ body{
 }
 .cards-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   
     gap: 1rem;
 }
@@ -303,4 +303,13 @@ body{
 }
 .trending-desc{
     color: #575757;
+}
+.trending img{
+    width: 60px;
+}
+
+.trending-item{
+    display: flex;
+    align-items: center;
+    gap:20px;
 }
