@@ -194,6 +194,7 @@ body{
 .cards-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
     gap: 1rem;
 }
 .card{
@@ -217,7 +218,6 @@ body{
     left: 0;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-
 }
 .card h4{
     font-size: 1.2rem;
